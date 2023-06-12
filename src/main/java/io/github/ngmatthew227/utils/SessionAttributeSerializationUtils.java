@@ -1,4 +1,4 @@
-package com.ngmatthew227.utils;
+package io.github.ngmatthew227.utils;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -9,7 +9,7 @@ import org.springframework.core.serializer.support.DeserializingConverter;
 import org.springframework.core.serializer.support.SerializingConverter;
 import org.springframework.util.Base64Utils;
 
-import com.ngmatthew227.CassandraHttpSession;
+import io.github.ngmatthew227.CassandraHttpSession;
 
 public class SessionAttributeSerializationUtils {
 

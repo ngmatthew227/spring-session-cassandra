@@ -1,4 +1,4 @@
-package com.ngmatthew227;
+package io.github.ngmatthew227;
 
 import java.text.MessageFormat;
 import java.time.Duration;

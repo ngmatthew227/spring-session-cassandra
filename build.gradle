@@ -1,17 +1,80 @@
 plugins {
-	id 'java'
+  id 'java-library'
+  id 'maven-publish'
+  id 'signing'
 }
 
 repositories {
   mavenCentral()
 }
 
-group = 'com.ngmatthew227'
+group = 'io.github.ngmatthew227'
 description = 'Spring Session for Cassandra'
 archivesBaseName = 'spring-session-cassandra'
-version = '0.1'
+version = '1.0'
+
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
 
 dependencies {
     implementation 'org.springframework.session:spring-session-core:2.7.1'
     implementation 'org.springframework.data:spring-data-cassandra:3.4.11'
+}
+
+publishing {
+  publications {
+    mavenJava(MavenPublication) {
+      groupId = 'io.github.ngmatthew227'
+      artifactId = 'spring-session-cassandra'
+      version = '1.0'
+      from components.java
+
+      pom {
+        name = 'Spring Session Cassandra'
+        description = 'Spring Session Cassandra provides SessionRepository implementation backed by Cassandra.'
+        url = 'https://github.com/ngmatthew227/spring-session-cassandra'
+        licenses {
+          license {
+            name = 'MIT License'
+            url = 'http://www.opensource.org/licenses/mit-license.php'
+          }
+        }
+        developers {
+          developer {
+            id = 'ngmatthew227'
+            name = 'Nicholas Matthew'
+            email = 'matthewlearn56@gmail.com'
+          }
+        }
+        scm {
+          connection = 'scm:git:git://github.com/ngmatthew227/spring-session-cassandra.git'
+          developerConnection = 'scm:git:git://github.com/ngmatthew227/spring-session-cassandra.git'
+          url = 'http://github.com/ngmatthew227/spring-session-cassandra'
+        }
+      }
+    }
+  }
+  repositories {
+    maven {
+      url = uri('https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/')
+      credentials {
+        username ossrhUsername
+        password ossrhPassword
+      }
+    }
+  }
+
+}
+
+signing {
+    sign publishing.publications.mavenJava
+}
+
+
+javadoc {
+    if(JavaVersion.current().isJava9Compatible()) {
+        options.addBooleanOption('html5', true)
+    }
 }

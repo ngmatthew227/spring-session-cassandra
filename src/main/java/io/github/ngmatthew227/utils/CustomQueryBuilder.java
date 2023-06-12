@@ -1,4 +1,4 @@
-package com.ngmatthew227.utils;
+package io.github.ngmatthew227.utils;
 
 import java.util.Map;
 import java.util.UUID;
@@ -10,7 +10,7 @@ import com.datastax.oss.driver.api.core.cql.DefaultBatchType;
 import com.datastax.oss.driver.api.querybuilder.QueryBuilder;
 import com.datastax.oss.driver.api.querybuilder.delete.Delete;
 import com.datastax.oss.driver.api.querybuilder.insert.Insert;
-import com.ngmatthew227.CassandraHttpSession;
+import io.github.ngmatthew227.CassandraHttpSession;
 
 public class CustomQueryBuilder {
   public static BatchStatement createNewSession(String tableName, String indexTableName,
