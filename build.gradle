@@ -1,0 +1,17 @@
+plugins {
+	id 'java'
+}
+
+repositories {
+  mavenCentral()
+}
+
+group = 'com.ngmatthew227'
+description = 'Spring Session for Cassandra'
+archivesBaseName = 'spring-session-cassandra'
+version = '0.1'
+
+dependencies {
+    implementation 'org.springframework.session:spring-session-core:2.7.1'
+    implementation 'org.springframework.data:spring-data-cassandra:3.4.11'
+}
