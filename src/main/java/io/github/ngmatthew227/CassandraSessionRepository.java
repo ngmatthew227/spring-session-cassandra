@@ -1,4 +1,4 @@
-package com.ngmatthew227;
+package io.github.ngmatthew227;
 
 import java.time.Duration;
 import java.time.Instant;
@@ -21,8 +21,8 @@ import com.datastax.oss.driver.api.core.cql.DefaultBatchType;
 import com.datastax.oss.driver.api.querybuilder.QueryBuilder;
 import com.datastax.oss.driver.api.querybuilder.delete.Delete;
 import com.datastax.oss.driver.api.querybuilder.select.Select;
-import com.ngmatthew227.utils.CustomQueryBuilder;
-import com.ngmatthew227.utils.SessionAttributeSerializationUtils;
+import io.github.ngmatthew227.utils.CustomQueryBuilder;
+import io.github.ngmatthew227.utils.SessionAttributeSerializationUtils;
 
 public class CassandraSessionRepository implements FindByIndexNameSessionRepository<CassandraHttpSession> {
 

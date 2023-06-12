@@ -1,4 +1,4 @@
-package com.ngmatthew227.config;
+package io.github.ngmatthew227.config;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

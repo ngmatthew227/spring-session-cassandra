@@ -1,4 +1,4 @@
-package com.ngmatthew227.config;
+package io.github.ngmatthew227.config;
 
 import java.util.Map;
 
@@ -15,7 +15,7 @@ import org.springframework.util.StringUtils;
 
 import com.datastax.oss.driver.api.core.ConsistencyLevel;
 import com.datastax.oss.driver.api.core.DefaultConsistencyLevel;
-import com.ngmatthew227.CassandraSessionRepository;
+import io.github.ngmatthew227.CassandraSessionRepository;
 
 @Configuration
 public class CassandraHttpSessionConfiguration extends SpringHttpSessionConfiguration implements ImportAware {

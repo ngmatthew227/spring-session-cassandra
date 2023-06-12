@@ -1,4 +1,4 @@
-package com.ngmatthew227.utils;
+package io.github.ngmatthew227.utils;
 
 import org.springframework.session.Session;
 
