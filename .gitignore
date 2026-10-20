@@ -25,3 +25,6 @@ secring.gpg
 /bin/**
 
 .vscode/**
+*.har
+*.exe
+.vscode/tasks.json
